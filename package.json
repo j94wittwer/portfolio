@@ -1,0 +1,22 @@
+{
+  "name": "portfoliojonaswittwer",
+  "version": "1.0.0",
+  "description": "Portfolio Website, Jonas Wittwer",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j94wittwer/portfolio.git"
+  },
+  "author": "Jonas Wittwer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j94wittwer/portfolio/issues"
+  },
+  "homepage": "https://github.com/j94wittwer/portfolio#readme",
+  "dependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
