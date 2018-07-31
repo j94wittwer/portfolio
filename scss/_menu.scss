@@ -1,4 +1,5 @@
 // Menu Button
+
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -10,11 +11,10 @@
   .btn-line {
     width: 28px;
     height: 3px;
-    margin: 0 0 5px 0;
+    margin: 0 0 5px;
     background: #fff;
     @include easeOut;
   }
-
   //Rotate Into X With Menu Lines
   &.close {
     transform: rotate(180deg);
@@ -24,12 +24,10 @@
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
       }
-
       // Line 2 - Hide
       &:nth-child(2) {
         opacity: 0;
       }
-
       // Line 3 - Rotate
       &:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
@@ -37,8 +35,8 @@
     }
   }
 }
-
 // Menu Overlay
+
 .menu {
   position: fixed;
   top: 0;
@@ -75,7 +73,6 @@
       transform: translate3d(0, 0, 0);
     }
   }
-
   // Branding Slide
   &-branding {
     background: $primary-color;
@@ -90,8 +87,45 @@
     .portrait {
       width: 250px;
       height: 250px;
-      background:
+      background: url("../img/portrait.jpg");
+      border-radius: 50%;
+      border: solid 3px $secondary-color;
+    }
+  }
+
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
     }
 
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: capitalize;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    @include easeOut;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Delay each nav item Slide
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
   }
 }
