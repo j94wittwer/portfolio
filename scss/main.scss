@@ -1,6 +1,5 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
 
 * {
   box-sizing: border-box;
@@ -10,10 +9,10 @@ body {
   @include background;
   background: $primary-color;
   color: set-text-color($primary-color);
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5;
+  line-height: 1.5l;
 }
 
 // Headings
@@ -125,3 +124,5 @@ main {
   color: set-text-color($primary-color);
   height: 60px;
 }
+
+@import 'mobile';
